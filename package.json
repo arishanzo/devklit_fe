@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "eslint",
-   "deploy": "wrangler pages deploy .vercel/output/static --project-name=devklittech",
+    "deploy": "wrangler pages deploy .vercel/output/static --project-name=devklittech",
     "pages:build": "npx @cloudflare/next-on-pages"
   },
   "dependencies": {
