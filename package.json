@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "wrangler pages deploy .vercel/output/static",
+   "deploy": "wrangler pages deploy .vercel/output/static --project-name=my-app",
     "pages:build": "npx @cloudflare/next-on-pages"
   },
   "dependencies": {
