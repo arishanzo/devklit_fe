@@ -6,6 +6,7 @@ import Footer from "./components/layouts/footer";
 
 const poppins = Poppins({
   variable: "--font-poppins",
+   subsets: ["latin"], 
   display: "swap",
   weight: ["400", "500", "600", "700", "800" ]
 });
@@ -22,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" >
       <body
         className={`${poppins.variable} antialiased`}
       >

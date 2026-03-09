@@ -4,17 +4,16 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "deploy": "wrangler pages deploy .vercel/output/static --project-name=devklittech",
     "pages:build": "npx @cloudflare/next-on-pages"
   },
   "dependencies": {
-    "@opennextjs/cloudflare": "^1.17.1",
-    "next": "16.1.6",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "next": "^16.1.6",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

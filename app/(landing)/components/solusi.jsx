@@ -64,7 +64,7 @@ const Solusi = () => {
                 </svg>
             </div>
 
-            <div className="max-w-7xl mx-auto relative z-10 px-8">
+            <div className="max-w-7xl mx-auto relative z-10 px-4">
                 {/* Header */}
                 <header className="text-center mb-16">
                     <div className="inline-block px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full mb-4">

@@ -7,7 +7,7 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 md:py-4 py-2 px-8 mb-8">
+        <header className="fixed top-0 left-0 right-0 z-50 py-4 px-8 mb-8">
             <nav className="max-w-7xl mx-auto px-8 sm:px-6 bg-white/95 lg:px-8 rounded-full border-b border-gray-200 shadow-sm">
                 <div className="flex justify-between items-center h-20">
                     {/* Logo */}
@@ -22,28 +22,32 @@ const Header = () => {
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-8">
-                        <Link href="/solutions" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-                            Solutions
+                        <Link href="#about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                          About
                         </Link>
-                        <Link href="/products" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-                            Products
+                        <Link href="#layanan" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                            Layanan
                         </Link>
-                        <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-                            About
+                        <Link href="#product" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                            Product
                         </Link>
-                        <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                          <Link href="/karir" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                            Karir
+                        </Link>
+                        <Link href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                             Contact
                         </Link>
                     </div>
 
                     {/* CTA Buttons */}
                     <div className="hidden md:flex items-center space-x-4">
-                        <Link href="/login" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-                            Sign In
-                        </Link>
-                        <Link href="/demo" className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:shadow-lg hover:scale-105 transition-all font-medium">
-                            Get Started
-                        </Link>
+                        <a  href='https://wa.me/628816982294?text=Halo%20saya%20ingin%20konsultasi' 
+                        target="_blank" 
+                            rel="noopener noreferrer"
+
+                         className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full hover:shadow-lg hover:scale-105 transition-all font-medium">
+                            Chat Kami
+                        </a>
                     </div>
 
                     {/* Mobile Menu Button */}

@@ -13,7 +13,7 @@ const CompanyProfile = () => {
         </div>
 
 
-        <header className="text-center mb-16 px-8">
+        <header className="text-center mb-16 px-4 ">
           <div className="inline-block px-4 py-2 bg-blue-50 rounded-full mb-4">
             <span className="text-blue-600 text-sm font-semibold">Tentang Kami</span>
           </div>
@@ -23,14 +23,14 @@ const CompanyProfile = () => {
               Transformasi Digital
             </span>
           </h2>
-          <p className="text-gray-600 text-lg mt-6 max-w-3xl mx-auto">
+          <p className="text-gray-600 md:text-lg text-md mt-6 max-w-3xl mx-auto">
             Perusahaan kami berfokus pada transformasi digital yang membantu
             organisasi meningkatkan efisiensi operasional, inovasi produk,
             serta pengambilan keputusan berbasis data.
           </p>
         </header>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto px-8">
+        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
           <article className="group relative bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl hover:shadow-xl transition-all duration-300 border border-blue-100">
             <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center mb-4">
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -111,7 +111,7 @@ const CompanyProfile = () => {
                 Digital Terpadu
               </span>
             </h2>
-            <p className="text-gray-600 text-lg mt-6 max-w-2xl mx-auto">
+            <p className="text-gray-600 md:text-lg text-md mt-6 max-w-2xl mx-auto">
               Solusi teknologi untuk mempercepat digitalisasi bisnis Anda
             </p>
           </header>
