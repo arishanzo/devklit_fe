@@ -7,7 +7,7 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 py-4 px-8 mb-8">
+        <header className="fixed top-0 left-0 right-0 z-50 py-4 px-4 mb-8">
             <nav className="max-w-7xl mx-auto px-8 sm:px-6 bg-white/95 lg:px-8 rounded-full border-b border-gray-200 shadow-sm">
                 <div className="flex justify-between items-center h-20">
                     {/* Logo */}
