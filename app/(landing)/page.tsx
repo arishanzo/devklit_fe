@@ -3,7 +3,6 @@ import CompanyProfile from "./components/companyprofile";
 import Solusi from "./components/solusi";
 import Testimoni from "./components/testimoni"
 
-export const runtime = 'edge';
 
 export default function Home() {
   return (
