@@ -131,20 +131,14 @@ const Header = () => {
 
                     {/* Footer Actions */}
                     <div className="p-6 border-t border-gray-200 space-y-3">
-                        <Link 
-                            href="/login" 
-                            onClick={() => setIsMenuOpen(false)}
-                            className="block px-4 py-3 text-center text-gray-900 border border-gray-300 hover:bg-gray-50 rounded-lg transition-colors font-medium"
-                        >
-                            Sign In
-                        </Link>
-                        <Link 
-                            href="/demo" 
-                            onClick={() => setIsMenuOpen(false)}
-                            className="block px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg text-center font-medium hover:shadow-lg transition-all"
-                        >
-                            Get Started
-                        </Link>
+
+                          <a  href='https://wa.me/628816982294?text=Halo%20saya%20ingin%20konsultasi' 
+                        target="_blank" 
+                            rel="noopener noreferrer"
+
+                         className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full hover:shadow-lg hover:scale-105 transition-all font-medium">
+                            Chat Kami
+                        </a>
                     </div>
                 </div>
             </div>
