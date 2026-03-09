@@ -13,8 +13,17 @@ const poppins = Poppins({
 
 
 export const metadata: Metadata = {
-  title: "Devklit Tech",
-  description: "Devklit adalah perusahaan teknologi untuk pengembangan aplikasi",
+  title: "Devklit Tech | Software Development Company",
+  description:
+    "Devklit Tech adalah perusahaan software development yang menyediakan layanan pembuatan website, aplikasi mobile, sistem custom, dan solusi teknologi untuk transformasi digital bisnis.",
+  keywords: [
+    "software development",
+    "web development",
+    "mobile app development",
+    "custom software",
+    "perusahaan teknologi",
+    "jasa pembuatan aplikasi",
+  ],
 };
 
 export default function RootLayout({
