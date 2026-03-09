@@ -3,7 +3,7 @@ const CompanyProfile = () => {
     <main className="bg-white">
 
       {/* ABOUT SECTION */}
-      <section className="py-24 px-6 mx-auto relative overflow-hidden">
+      <section className="py-24 px-2 mx-auto relative overflow-hidden">
         {/* Dot Pattern Background */}
         <div className="absolute inset-0  opacity-20">
           <div className="absolute inset-0" style={{

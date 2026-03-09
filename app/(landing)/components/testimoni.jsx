@@ -43,7 +43,7 @@ const Testimoni = () => {
     }, []);
 
     return (
-        <section className=" relative py-24 px-6  bg-white overflow-hidden">
+        <section className=" relative py-24 px-2  bg-white overflow-hidden">
             {/* Pattern Background */}
             <div className="absolute inset-0 opacity-20">
                 <div className="absolute inset-0" style={{
@@ -216,7 +216,7 @@ const Testimoni = () => {
                     </header>
 
                     {/* Testimonial Cards */}
-                    <div ref={scrollRef} className="flex md:grid md:grid-cols-3 gap-8 overflow-x-auto snap-x snap-mandatory md:overflow-visible scrollbar-hide pb-4">
+                    <div ref={scrollRef} className="flex md:grid md:grid-cols-3 gap-2 overflow-x-auto snap-x snap-mandatory md:overflow-visible scrollbar-hide pb-4">
                         {/* Testimonial 1 */}
                         <article className="group relative bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl border-2 border-blue-100 hover:border-blue-500 hover:shadow-2xl transition-all duration-300 min-w-[85vw] md:min-w-0 snap-center">
                             <div className="absolute top-4 right-4 text-blue-200 opacity-50">
