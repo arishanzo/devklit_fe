@@ -66,19 +66,20 @@ const HeroSection = () => {
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in-up animation-delay-400">
                     <Link 
-                        href="/demo" 
+                        href="#contact" 
                         className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 hover:scale-105 transition-all shadow-xl hover:shadow-2xl w-full sm:w-auto"
                         aria-label="Mulai transformasi digital gratis"
                     >
                         Mulai Transformasi Digital
                     </Link>
-                    <Link 
-                        href="/contact" 
+                    <a  href='https://wa.me/628816982294?text=Halo%20saya%20ingin%20konsultasi' 
+                        target="_blank" 
+                            rel="noopener noreferrer"
                         className="px-8 py-4 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white rounded-lg font-semibold hover:bg-white/20 hover:scale-105 transition-all w-full sm:w-auto"
                         aria-label="Konsultasi gratis dengan tim ahli"
                     >
                         Konsultasi Gratis
-                    </Link>
+                    </a>
                 </div>
 
                 {/* Stats */}
