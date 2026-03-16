@@ -9,14 +9,18 @@ const Footer = () => {
                     {/* Company Info */}
                     <div className="lg:col-span-2">
                         <div className="flex items-center space-x-2 mb-4">
-                            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
-                                <span className="text-white font-bold text-xl">D</span>
-                            </div>
-                            <span className="text-xl font-bold">Devklit</span>
+                             <img src="/logo.png" alt="Devklit Logo" className="md:w-10 md:h-10 w-8 h-8 rounded-lg object-contain transform group-hover:scale-105 transition-transform" />
+                      
+                        <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                            Devklit
+                        </span>
                         </div>
                         <p className="text-gray-300 mb-4 max-w-sm">
                             Empowering businesses with innovative technology solutions and cutting-edge digital transformation services.
                         </p>
+                          <p className="text-gray-300 mb-4 max-w-sm font-semibold">
+                             Lamongan, East Java
+                           </p>
                         {/* Social Media */}
                         <div className="flex space-x-4">
                             <Link href="#" className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-all hover:scale-110">

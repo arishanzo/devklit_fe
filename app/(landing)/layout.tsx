@@ -12,8 +12,12 @@ const poppins = Poppins({
 });
 
 
+
 export const metadata: Metadata = {
   title: "Devklit Tech | Software Development Company",
+  icons: {
+    icon: "/logo.png",
+  },
   description:
     "Devklit Tech adalah perusahaan software development yang menyediakan layanan pembuatan website, aplikasi mobile, sistem custom, dan solusi teknologi untuk transformasi digital bisnis.",
   keywords: [
