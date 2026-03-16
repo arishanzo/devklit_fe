@@ -43,7 +43,7 @@ const Testimoni = () => {
     }, []);
 
     return (
-        <section className=" relative py-24 px-2  bg-white overflow-hidden">
+        <section className=" relative md:py-24 py-8 px-2  bg-white overflow-hidden">
             {/* Pattern Background */}
             <div className="absolute inset-0 opacity-20">
                 <div className="absolute inset-0" style={{
@@ -78,7 +78,7 @@ const Testimoni = () => {
                         </h3>
                     </header>
 
-                    <div className="grid md:grid-cols-4 gap-2">
+                    <div className="grid md:grid-cols-4 p-4 gap-2">
                         {/* Cloud Infrastructure */}
                         <article className="group bg-gradient-to-br from-blue-50 to-white p-6 rounded-2xl border-2 border-blue-100 hover:border-blue-500 hover:shadow-2xl transition-all duration-300">
                             <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
