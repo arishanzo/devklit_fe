@@ -144,7 +144,7 @@ const CompanyProfile = () => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Pengembangan Software
+                  Pengembangan Software Web & Aplikasi Android
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
                   Pengembangan aplikasi web dan sistem enterprise yang scalable
@@ -153,23 +153,26 @@ const CompanyProfile = () => {
               </div>
             </article>
 
-            <article className="group relative p-8 rounded-2xl bg-white border-2 border-gray-100 hover:border-indigo-500 hover:shadow-2xl transition-all duration-300">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-100 to-blue-100 rounded-bl-full opacity-50"></div>
-              <div className="relative">
-                <div className="w-14 h-14 bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Data Analytics & Business Intelligence
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Mengubah data bisnis menjadi insight strategis menggunakan
-                  teknologi analitik modern.
-                </p>
+           <article className="group relative p-8 rounded-2xl bg-white border-2 border-gray-100 hover:border-indigo-500 hover:shadow-2xl transition-all duration-300">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-100 to-blue-100 rounded-bl-full opacity-50"></div>
+
+            <div className="relative">
+              <div className="w-14 h-14 bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7a2 2 0 012-2h3l2 2h7a2 2 0 012 2v8a2 2 0 01-2 2H6a2 2 0 01-2-2V7z" />
+                </svg>
               </div>
-            </article>
+
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                SaaS Development & Cloud Application Platform
+              </h3>
+
+              <p className="text-gray-600 leading-relaxed">
+                <strong>SaaS (Software as a Service)</strong> yang scalable, aman, dan mendukung sistem 
+                langganan serta multi-user bagi bisnis digital modern.
+              </p>
+            </div>
+          </article>
           </div>
         </div>
       </section>
