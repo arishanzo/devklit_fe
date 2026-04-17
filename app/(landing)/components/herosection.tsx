@@ -8,7 +8,7 @@ const HeroSection = () => {
     const uptime = useCountUp(999);
     const pengalaman = useCountUp(15);
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative min-h-screen  flex items-center justify-center overflow-hidden">
             {/* Background */}
             <div className="absolute inset-0" style={{
                 background: 'linear-gradient(135deg, #eff6ff 0%, #eef2ff 50%, #f5f3ff 100%)'
@@ -27,7 +27,7 @@ const HeroSection = () => {
             }} />
 
             {/* Content */}
-            <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-4 sm:px-6 lg:px-8 py-32 md:mt-8 text-center">
+            <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-4 sm:px-6 lg:px-8 py-32 md:mt-8 text-center">
                 {/* Badge */}
                 <div className="inline-flex items-center space-x-2 bg-indigo-50 border border-indigo-100 rounded-full px-4 py-2 mb-8 animate-fade-in">
                     <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
