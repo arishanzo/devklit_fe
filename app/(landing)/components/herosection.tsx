@@ -4,38 +4,24 @@ import Link from 'next/link';
 
 const HeroSection = () => {
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700">
-            {/* Animated Background Elements */}
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+            {/* Gradient Mesh Background */}
+            <div className="absolute inset-0" style={{
+                background: 'linear-gradient(135deg, #3b0764 0%, #4f46e5 40%, #2563eb 70%, #1d4ed8 100%)'
+            }} />
+
+            {/* Aurora blobs */}
             <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+                <div className="absolute -top-20 left-1/3 w-[700px] h-[500px] bg-violet-500 rounded-full filter blur-[140px] opacity-40" />
+                <div className="absolute bottom-0 right-1/4 w-[600px] h-[500px] bg-blue-500 rounded-full filter blur-[130px] opacity-35" />
+                <div className="absolute top-1/3 -left-20 w-[400px] h-[400px] bg-purple-500 rounded-full filter blur-[100px] opacity-30" />
             </div>
 
-            {/* Animated Moving Lines */}
-            <div className="absolute inset-0 overflow-hidden">
-                {/* Horizontal Moving Lines */}
-                <div className="absolute w-full h-full">
-                    <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-white to-transparent opacity-20 animate-line-horizontal"></div>
-                    <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-white to-transparent opacity-20 animate-line-horizontal animation-delay-2000"></div>
-                    <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-white to-transparent opacity-20 animate-line-horizontal animation-delay-4000"></div>
-                </div>
-                
-                {/* Vertical Moving Lines */}
-                <div className="absolute w-full h-full">
-                    <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-white to-transparent opacity-20 animate-line-vertical"></div>
-                    <div className="absolute top-0 left-1/2 w-px h-full bg-gradient-to-b from-transparent via-white to-transparent opacity-20 animate-line-vertical animation-delay-2000"></div>
-                    <div className="absolute top-0 left-3/4 w-px h-full bg-gradient-to-b from-transparent via-white to-transparent opacity-20 animate-line-vertical animation-delay-4000"></div>
-                </div>
-
-                {/* Diagonal Moving Lines */}
-                <div className="absolute w-full h-full">
-                    <div className="absolute top-0 left-0 w-full h-full">
-                        <div className="absolute w-[200%] h-px bg-gradient-to-r from-transparent via-cyan-300 to-transparent opacity-30 rotate-45 origin-center animate-line-diagonal" style={{top: '20%', left: '-50%'}}></div>
-                        <div className="absolute w-[200%] h-px bg-gradient-to-r from-transparent via-purple-300 to-transparent opacity-30 rotate-45 origin-center animate-line-diagonal animation-delay-3000" style={{top: '60%', left: '-50%'}}></div>
-                    </div>
-                </div>
-            </div>
+            {/* Grid overlay */}
+            <div className="absolute inset-0 opacity-[0.07]" style={{
+                backgroundImage: `linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)`,
+                backgroundSize: '60px 60px'
+            }} />
 
             {/* Content */}
             <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-4 sm:px-6 lg:px-8 py-32 md:mt-8 text-center">

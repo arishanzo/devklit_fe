@@ -1,4 +1,5 @@
 const CompanyProfile = () => {
+  
   return (
     <main className="bg-white">
 

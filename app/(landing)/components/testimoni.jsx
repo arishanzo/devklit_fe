@@ -78,7 +78,7 @@ const Testimoni = () => {
                         </h3>
                     </header>
 
-                    <div className="grid md:grid-cols-4 p-4 gap-2">
+                    <div className="grid md:grid-cols-3 p-4 gap-2">
                         {/* Cloud Infrastructure */}
                         <article className="group bg-gradient-to-br from-blue-50 to-white p-6 rounded-2xl border-2 border-blue-100 hover:border-blue-500 hover:shadow-2xl transition-all duration-300">
                             <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
@@ -155,47 +155,6 @@ const Testimoni = () => {
                         </article>
 
 
-                                                {/* SEO Optimization */}
-                        <article className="group bg-gradient-to-br from-green-50 to-white p-6 rounded-2xl border-2 border-green-100 hover:border-green-500 hover:shadow-2xl transition-all duration-300">
-                            
-                            <div className="w-14 h-14 bg-gradient-to-br from-green-600 to-green-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a7 7 0 100 14 7 7 0 000-14zm0 0v4m0 6v2m8-8h-2M5 10H3m13.657 5.657l-1.414-1.414M7.757 7.757 6.343 6.343m12.728 0l-1.414 1.414M7.757 16.243l-1.414 1.414"/>
-                                </svg>
-                            </div>
-
-                            <h4 className="text-xl font-bold text-gray-900 mb-2">SEO Optimization</h4>
-
-                            <p className="text-gray-600 text-sm mb-4">
-                                Layanan SEO profesional untuk meningkatkan peringkat website Anda di mesin pencari, 
-                                meningkatkan trafik organik, dan membantu bisnis lebih mudah ditemukan oleh calon pelanggan.
-                            </p>
-
-                            <h5 className="font-semibold text-gray-900 mb-2 text-sm">Manfaat:</h5>
-                            <ul className="space-y-1 text-sm text-gray-600 mb-4">
-                                <li className="flex items-center">
-                                    <span className="w-1.5 h-1.5 bg-indigo-600 rounded-full mr-2"></span>
-                                    Meningkatkan ranking di Google
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="w-1.5 h-1.5 bg-indigo-600 rounded-full mr-2"></span>
-                                    Mendapatkan trafik organik berkualitas
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="w-1.5 h-1.5 bg-indigo-600 rounded-full mr-2"></span>
-                                    Meningkatkan visibilitas bisnis online
-                                </li>
-                            </ul>
-
-                            <h5 className="font-semibold text-gray-900 mb-2 text-sm">Strategi:</h5>
-                            <div className="flex flex-wrap gap-2">
-                                <span className="px-2 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-medium">Keyword Research</span>
-                                <span className="px-2 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-medium">On Page SEO</span>
-                                <span className="px-2 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-medium">Technical SEO</span>
-                                <span className="px-2 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-medium">SEO Audit</span>
-                            </div>
-
-                        </article>
 
 
                     </div>
@@ -226,9 +185,7 @@ const Testimoni = () => {
                             </div>
                             <div className="relative">
                                 <div className="flex items-center mb-4">
-                                    <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                                        A
-                                    </div>
+                                    <img src="https://ui-avatars.com/api/?name=Ahmad+Rizki&background=2563eb&color=fff&size=56" alt="Ahmad Rizki" className="w-14 h-14 rounded-full object-cover" />
                                     <div className="ml-4">
                                         <h4 className="font-bold text-gray-900">Ahmad Rizki</h4>
                                         <p className="text-sm text-gray-600">CEO, PT Teknologi Maju</p>
@@ -256,9 +213,7 @@ const Testimoni = () => {
                             </div>
                             <div className="relative">
                                 <div className="flex items-center mb-4">
-                                    <div className="w-14 h-14 bg-gradient-to-br from-purple-600 to-purple-700 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                                        S
-                                    </div>
+                                    <img src="https://ui-avatars.com/api/?name=Siti+Nurhaliza&background=9333ea&color=fff&size=56" alt="Siti Nurhaliza" className="w-14 h-14 rounded-full object-cover" />
                                     <div className="ml-4">
                                         <h4 className="font-bold text-gray-900">Siti Nurhaliza</h4>
                                         <p className="text-sm text-gray-600">Director, CV Digital Solusi</p>
@@ -286,9 +241,7 @@ const Testimoni = () => {
                             </div>
                             <div className="relative">
                                 <div className="flex items-center mb-4">
-                                    <div className="w-14 h-14 bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                                        B
-                                    </div>
+                                    <img src="https://ui-avatars.com/api/?name=Budi+Santoso&background=4f46e5&color=fff&size=56" alt="Budi Santoso" className="w-14 h-14 rounded-full object-cover" />
                                     <div className="ml-4">
                                         <h4 className="font-bold text-gray-900">Budi Santoso</h4>
                                         <p className="text-sm text-gray-600">CTO, PT Inovasi Digital</p>
