@@ -103,7 +103,7 @@ const Product = () => {
     const filtered = active === 'Semua' ? products : products.filter(p => p.category === active);
 
     return (
-        <section id="portofolio" className="relative py-24 overflow-hidden">
+        <section id="product" className="relative py-24 overflow-hidden">
             {/* Background */}
             <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #f8faff 0%, #f3f0ff 50%, #f0f9ff 100%)' }} />
             <div className="absolute inset-0 opacity-40" style={{
@@ -116,7 +116,7 @@ const Product = () => {
                 <div className="text-center mb-14 animate-fade-in-up">
                     <div className="inline-flex items-center space-x-2 bg-indigo-50 border border-indigo-100 rounded-full px-4 py-2 mb-6">
                         <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
-                        <span className="text-indigo-600 text-sm font-medium">Pricing</span>
+                        <span className="text-indigo-600 text-sm font-medium">Product</span>
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                         Harga Paket{' '}
@@ -125,7 +125,7 @@ const Product = () => {
                         </span>
                     </h2>
                     <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-                        Beberapa Paket harga yang kami tawarkan untuk membangun proyek digital sesuai kebutuhan bisnis Anda. Setiap paket dirancang untuk memberikan nilai maksimal dengan teknologi terkini dan hasil yang terbukti.
+                        Beberapa Paket harga yang kami tawarkan untuk membangun proyek digital sesuai kebutuhan bisnis Anda. 
                     </p>
                 </div>
 

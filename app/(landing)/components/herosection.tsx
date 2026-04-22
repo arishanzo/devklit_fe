@@ -8,7 +8,7 @@ const HeroSection = () => {
     const uptime = useCountUp(999);
     const pengalaman = useCountUp(15);
     return (
-        <section className="relative min-h-screen  flex items-center justify-center overflow-hidden">
+        <section id='home' className="relative min-h-screen  flex items-center justify-center overflow-hidden">
             {/* Background */}
             <div className="absolute inset-0" style={{
                 background: 'linear-gradient(135deg, #eff6ff 0%, #eef2ff 50%, #f5f3ff 100%)'

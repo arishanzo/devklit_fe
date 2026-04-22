@@ -18,10 +18,18 @@ const FormContact = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
+    <section id="contact" className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
       <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #f8faff 0%, #f3f0ff 50%, #f0f9ff 100%)' }} />
       <div className="absolute inset-0 opacity-40" style={{ backgroundImage: `linear-gradient(rgba(99,102,241,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.06) 1px, transparent 1px)`, backgroundSize: '60px 60px' }} />
-      <div className="relative z-10 w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden shadow-xl shadow-gray-200/80 border border-gray-100">
+      <div className="relative z-10 w-full max-w-7xl">
+        <div className="text-center mb-12">
+          <div className="inline-block px-4 py-2 bg-blue-50 rounded-full mb-4">
+                      <span className="text-blue-600 text-sm font-semibold">Contact</span>
+                    </div>
+          <h2 className="text-4xl font-bold text-zinc-900 mb-4">Ada yang Bisa Kami Bantu?</h2>
+          <p className="text-zinc-500 text-base max-w-xl mx-auto">Ceritakan kebutuhan Anda dan tim kami siap memberikan solusi terbaik.</p>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden shadow-xl shadow-gray-200/80 border border-gray-100">
 
         {/* Left Panel */}
         <div className="bg-blue-900 p-10 flex flex-col justify-between ">
@@ -131,6 +139,7 @@ const FormContact = () => {
               </form>
             </>
           )}
+        </div>
         </div>
       </div>
     </section>

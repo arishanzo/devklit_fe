@@ -36,7 +36,7 @@ const Header = () => {
                         <Link href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                             Contact
                         </Link>
-                         <Link href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                         <Link href="#artikel" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                             Artikel
                         </Link>
                     </div>
@@ -101,33 +101,51 @@ const Header = () => {
                     <div className="flex-1 overflow-y-auto p-6">
                         <nav className="space-y-2">
                             <Link 
-                                href="/solutions" 
-                                onClick={() => setIsMenuOpen(false)}
-                                className="block px-4 py-3 text-gray-900 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
-                            >
-                                Solutions
-                            </Link>
-                            <Link 
-                                href="/products" 
-                                onClick={() => setIsMenuOpen(false)}
-                                className="block px-4 py-3 text-gray-900 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
-                            >
-                                Products
-                            </Link>
-                            <Link 
-                                href="/about" 
+                                href="/#about" 
                                 onClick={() => setIsMenuOpen(false)}
                                 className="block px-4 py-3 text-gray-900 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
                             >
                                 About
                             </Link>
                             <Link 
-                                href="/contact" 
+                                href="/#layanan" 
+                                onClick={() => setIsMenuOpen(false)}
+                                className="block px-4 py-3 text-gray-900 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
+                            >
+                                Layanan
+                            </Link>
+                            <Link 
+                                href="/#product" 
+                                onClick={() => setIsMenuOpen(false)}
+                                className="block px-4 py-3 text-gray-900 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
+                            >
+                                Product
+                            </Link>
+                            <Link 
+                                href="/karir" 
+                                onClick={() => setIsMenuOpen(false)}
+                                className="block px-4 py-3 text-gray-900 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
+                            >
+                               Karir
+                            </Link>
+
+                            <Link 
+                                href="/#contact" 
                                 onClick={() => setIsMenuOpen(false)}
                                 className="block px-4 py-3 text-gray-900 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
                             >
                                 Contact
                             </Link>
+
+                            <Link 
+                                href="/#artikel" 
+                                onClick={() => setIsMenuOpen(false)}
+                                className="block px-4 py-3 text-gray-900 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
+                            >
+                                Artikel
+                            </Link>
+                            
+                            
                         </nav>
                     </div>
 
