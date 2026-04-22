@@ -116,16 +116,16 @@ const Product = () => {
                 <div className="text-center mb-14 animate-fade-in-up">
                     <div className="inline-flex items-center space-x-2 bg-indigo-50 border border-indigo-100 rounded-full px-4 py-2 mb-6">
                         <span className="w-2 h-2 bg-indigo-400 rounded-full"></span>
-                        <span className="text-indigo-600 text-sm font-medium">Portofolio Kami</span>
+                        <span className="text-indigo-600 text-sm font-medium">Pricing</span>
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                        Proyek yang Telah{' '}
+                        Harga Paket{' '}
                         <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent">
-                            Kami Wujudkan
+                           Yang Kami Tawarkan
                         </span>
                     </h2>
                     <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-                        Lebih dari 500+ proyek sukses di berbagai industri dengan hasil yang terukur dan berdampak nyata.
+                        Beberapa Paket harga yang kami tawarkan untuk membangun proyek digital sesuai kebutuhan bisnis Anda. Setiap paket dirancang untuk memberikan nilai maksimal dengan teknologi terkini dan hasil yang terbukti.
                     </p>
                 </div>
 
