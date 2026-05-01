@@ -15,13 +15,7 @@ export default function Home() {
   return (
   <main>
   <HeroSection/>
-  <CompanyProfile />
-  <Layanan />
-  <Solusi />
-  <Product />
-  <Testimoni />
-  <FormContact />
-  < ArtikelPage/>
+
   </main>
   );
 }
