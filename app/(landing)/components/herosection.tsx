@@ -111,7 +111,7 @@ const HeroSection = () => {
                         />
 
                            {/* Stats */}
-                        <div className="grid grid-cols-4 mt-12 gap-2 animate-fade-in-up animation-delay-600">
+                        <div className="grid md:grid-cols-4 grid-cols-2 mt-12 md:gap-2 animate-fade-in-up animation-delay-600">
                             <div className="rounded-xl p-4 hover:shadow-md transition-all">
                                 <div className="text-2xl font-bold text-indigo-600 mb-1">{klien}+</div>
                                 <div className="text-gray-500 text-sm">Pelanggan Kami</div>
