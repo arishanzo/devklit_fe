@@ -2,10 +2,11 @@
 
 import Link from 'next/link';
 import useCountUp from '@/app/hooks/useCountUp';
-import { Code2, Database, Headphones, Settings, Shield, Smartphone, Users, Zap } from 'lucide-react';
+import { Code, Code2, CodeSquare, Database, Headphones, Settings, Shield, Smartphone, Users, Zap } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import useReveal from '@/app/hooks/useReveal';
+import Sponsor from './sponsor';
 
 const HeroSection = () => {
     const klien = useCountUp(120);
@@ -16,6 +17,9 @@ const HeroSection = () => {
 
   const { ref: webRef, visible: webVisible } = useReveal();
   const { ref: mobileRef, visible: mobileVisible } = useReveal();
+  const { ref: achieveRef, visible: achieveVisible } = useReveal();
+  const { ref: cardeRef, visible: cardVisible } = useReveal();
+
   const colors = ['bg-red-100', 'bg-blue-100','bg-green-100','bg-yellow-500','bg-purple-500'];
 
   
@@ -30,7 +34,7 @@ const HeroSection = () => {
        
 
             {/* Content */}
-            <div className="relative z-10 max-w-7xl mx-auto px-8 sm:px-6 lg:px-8  mt-32 md:py-16">
+            <div className="relative z-10 max-w-7xl mx-auto px-8 sm:px-6 lg:px-8  mt-28 py-12 md:py-16">
                 <div className="flex flex-col lg:flex-row gap-12">
 
                     {/* Right: Text */}
@@ -142,17 +146,45 @@ const HeroSection = () => {
                             </div>
                         </div>
                     </div>
-                   
-
                 </div>
             </div>
-            
+        </section>
+
+
+    {/* ACHIEVEMENT & VALUE PROPS */}
+    <section  ref={achieveRef} className='bg-gray-100 md:py-12 p-4'>
+       <div className="max-w-7xl mx-auto px-6 mt-3 py-2">
+  <div className={`opacity-0 ${achieveVisible ? 'anim-fade-up delay-1' : ''}`}>
+            <div className="grid grid-cols-1 md:grid-cols-3 justify-center items-center text-center md:text-left">
+   
+                <div className="flex justify-center md:justify-start items-center">
+              <CodeSquare className="hidden md:block md:w-62 md:h-62 w-32 h-32 text-gray-400 mb-4" />
+                </div>
+
+     <div className="flex md:col-span-2 flex-col gap-4">
+          <h2 className="text-2xl text-start font-bold text-gray-600">
+                Teknologi Yang Kami Gunakan
+            </h2>
+        <p className="text-gray-400 text-start text-sm ">
+            Kami memanfaatkan teknologi modern seperti React, Laravel, dan Docker untuk
+            membangun sistem yang aman, scalable, dan mudah dipelihara. Dengan kombinasi
+            ini, aplikasi dapat berjalan stabil, responsif, dan siap menghadapi kebutuhan
+            produksi.
+        </p>
+
+         <Sponsor/>
+
+        </div>
+      </div>
+
+  </div>
+</div>
 
         </section>
 
        
-<section className="relative py-12 bg-gradient-to-b from-white to-gray-50">
-
+<section ref={cardeRef} className="relative  py-16 bg-gradient-to-b from-white to-gray-50">
+     <div className={`opacity-0 ${cardVisible ? 'anim-fade-left delay-1' : ''}`}>
     <div className="max-w-7xl mx-auto px-6">
 
         {/* Cards */}
@@ -206,6 +238,7 @@ const HeroSection = () => {
                 </p>
             </div>
         </div>
+    </div>
     </div>
 </section>
 
