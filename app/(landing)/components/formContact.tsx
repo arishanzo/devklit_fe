@@ -4,12 +4,12 @@ import { useState } from "react";
 
 const FormContact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
-  const [status, setStatus] = useState(null);
+  const [status, setStatus] = useState<String | null>(null);
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (e: any) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     setLoading(true);
     await new Promise((r) => setTimeout(r, 1500));
@@ -146,7 +146,7 @@ const FormContact = () => {
   );
 };
 
-const InputField = ({ label, name, type, placeholder, value, onChange }) => (
+const InputField = ( { label, name, type, placeholder, value, onChange } : { label: string; name: string;type: string; placeholder: string; value: string;onChange: (e: React.ChangeEvent<HTMLInputElement>) => void; }) => (
   <div className="flex flex-col gap-1.5">
     <label className="text-zinc-700 text-sm font-medium">{label}</label>
     <input

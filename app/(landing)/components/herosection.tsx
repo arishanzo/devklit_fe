@@ -2,16 +2,28 @@
 
 import Link from 'next/link';
 import useCountUp from '@/app/hooks/useCountUp';
-import { Headphones, Settings, Zap } from 'lucide-react';
+import { Code2, Database, Headphones, Settings, Shield, Smartphone, Users, Zap } from 'lucide-react';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import useReveal from '@/app/hooks/useReveal';
 
 const HeroSection = () => {
     const klien = useCountUp(120);
     const uptime = useCountUp(999);
     const pengalaman = useCountUp(250);
 
+    const [visible, setVisible] = useState(false);
 
-    const colors = ['bg-red-100', 'bg-blue-100','bg-green-100','bg-yellow-500','bg-purple-500'];
+  const { ref: webRef, visible: webVisible } = useReveal();
+  const { ref: mobileRef, visible: mobileVisible } = useReveal();
+  const colors = ['bg-red-100', 'bg-blue-100','bg-green-100','bg-yellow-500','bg-purple-500'];
+
+  
+  useEffect(() => {
+    const t = setTimeout(() => setVisible(true), 100);
+    return () => clearTimeout(t);
+  }, []);
+
     return (
         <>
         <section className="relative min-h-screen   overflow-hidden">
@@ -24,7 +36,7 @@ const HeroSection = () => {
                     {/* Right: Text */}
                     <div className="flex-1 text-left">
                         {/* Badge */}
-                        <div className="inline-flex items-center space-x-2 bg-indigo-50 border border-indigo-100 rounded-full px-4 py-2 mb-8 animate-fade-in">
+                        <div className="inline-flex items-center space-x-2 border border-indigo-100 rounded-full px-4 py-2 mb-8 animate-fade-in">
                             <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
                             <span className="text-indigo-600 md:text-sm text-xs font-medium">🚀 Solusi Transformasi Digital Terpercaya</span>
                         </div>
@@ -195,10 +207,78 @@ const HeroSection = () => {
             </div>
         </div>
     </div>
-
-
-
 </section>
+
+
+
+      {/* DETAIL WEB & MOBILE */}
+      {/* <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-6 space-y-16">
+
+          <div ref={webRef} className="grid md:grid-cols-2 gap-12 items-center">
+            <div className={`opacity-0 ${webVisible ? 'anim-fade-left delay-1' : ''}`}>
+              <span className="text-xs font-semibold text-gray-600 tracking-widest uppercase py-1 rounded-full">Web Development</span>
+              <h2 className="text-3xl font-bold mt-4 mb-4"></h2>
+              <p className="text-gray-500 leading-relaxed mb-6"></p>
+              <div className="grid grid-cols-2 gap-3 mb-8">
+                {[
+                  { icon: Code2, label: "Clean Code Architecture" },
+                  { icon: Zap, label: "Performa Tinggi & SEO" },
+                  { icon: Shield, label: "Keamanan Enterprise" },
+                  { icon: Database, label: "Skalabel & Cloud-Ready" },
+                ].map(({ icon: I, label }) => (
+                  <div key={label} className="flex items-center gap-2 text-sm text-gray-700 bg-gray-50 rounded-lg px-3 py-2">
+                    <I className="w-4 h-4 text-blue-500" /> {label}
+                  </div>
+                ))}
+              </div>
+              <Link href="https://wa.me/6281122225804"
+                className="btn-shine inline-block text-white px-6 py-3 rounded-lg font-semibold">
+              hhh
+              </Link>
+            </div>
+            <div className={`opacity-0 ${webVisible ? 'anim-fade-right delay-2' : ''} img-zoom relative rounded-2xl overflow-hidden shadow-2xl aspect-video`}>
+              <Image unoptimized src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=800" alt="Web Dev" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+              <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur rounded-lg px-4 py-2 text-sm font-semibold text-gray-800">
+                🚀 100+ Website Diluncurkan
+              </div>
+            </div>
+          </div>
+
+          <div ref={mobileRef} className="grid md:grid-cols-2 gap-12 items-center">
+            <div className={`order-2 md:order-1 opacity-0 ${mobileVisible ? 'anim-fade-left delay-1' : ''} img-zoom relative rounded-2xl overflow-hidden shadow-2xl aspect-video`}>
+              <Image unoptimized src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800" alt="Mobile App" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent" />
+              <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur rounded-lg px-4 py-2 text-sm font-semibold text-gray-800">
+                📱 Android & iOS
+              </div>
+            </div>
+            <div className={`order-1 md:order-2 opacity-0 ${mobileVisible ? 'anim-fade-right delay-2' : ''}`}>
+              <span className="text-xs font-semibold text-gray-600 tracking-widest uppercase py-1 rounded-full">Mobile Development</span>
+              <h2 className="text-3xl font-bold mt-4 mb-4"></h2>
+              <p className="text-gray-500 leading-relaxed mb-6"></p>
+              <div className="grid grid-cols-2 gap-3 mb-8">
+                {[
+                  { icon: Smartphone, label: "React Native & Flutter" },
+                  { icon: Zap, label: "Animasi Smooth 60fps" },
+                  { icon: Shield, label: "Secure Authentication" },
+                  { icon: Users, label: "Push Notification" },
+                ].map(({ icon: I, label }) => (
+                  <div key={label} className="flex items-center gap-2 text-sm text-gray-700 bg-gray-50 rounded-lg px-3 py-2">
+                    <I className="w-4 h-4 text-blue-500" /> {label}
+                  </div>
+                ))}
+              </div>
+              <Link href="https://wa.me/6281122225804"
+                className="btn-shine inline-block text-white px-6 py-3 rounded-lg font-semibold">
+                Konsultasi Mobile App
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section> */}
+
         </>
     );
 };

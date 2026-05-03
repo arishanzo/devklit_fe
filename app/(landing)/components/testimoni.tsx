@@ -3,13 +3,13 @@
 import { useEffect, useRef } from 'react';
 
 const Testimoni = () => {
-    const scrollRef = useRef(null);
+    const scrollRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const scrollContainer = scrollRef.current;
         if (!scrollContainer) return;
 
-        let scrollInterval;
+        let scrollInterval: NodeJS.Timeout | null = null;
         let currentIndex = 0;
         const cardWidth = scrollContainer.clientWidth * 0.85 + 32; // 85vw + gap
 
