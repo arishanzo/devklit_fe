@@ -115,7 +115,7 @@ export default function InteractiveCalculator() {
   }, [companyName, referenceLink, calculatedSpecs.price, calculatedSpecs.days]);
 
   
- const { dynamicBenefits } = DynamicUseMemo(targetIndustry ,  activePlatformId);
+ const { dynamicBenefits } = DynamicUseMemo({targetIndustry ,  activePlatformId});
   const revealHeader = useReveal();
   const revealStep1 = useReveal();
   const revealStep2 = useReveal();
