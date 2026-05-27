@@ -21,22 +21,25 @@ const Header = () => {
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-8">
-                        <Link href="#about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                         <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                          Home
+                        </Link>
+                        <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                           About
                         </Link>
-                        <Link href="#layanan" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                        <Link href="/layanan" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                             Layanan
                         </Link>
-                        <Link href="#product" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-                            Product
+                         <Link href="/harga" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                            Harga
                         </Link>
                           <Link href="/karir" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                             Karir
                         </Link>
-                        <Link href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                        <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                             Contact
                         </Link>
-                         <Link href="#artikel" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                         <Link href="/artikel" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                             Artikel
                         </Link>
                     </div>
@@ -100,27 +103,35 @@ const Header = () => {
                     {/* Menu Items */}
                     <div className="flex-1 overflow-y-auto p-6">
                         <nav className="space-y-2">
+                             <Link 
+                                href="/home" 
+                                onClick={() => setIsMenuOpen(false)}
+                                className="block px-4 py-3 text-gray-900 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
+                            >
+                                Home
+                            </Link>
                             <Link 
-                                href="/#about" 
+                                href="/about" 
                                 onClick={() => setIsMenuOpen(false)}
                                 className="block px-4 py-3 text-gray-900 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
                             >
                                 About
                             </Link>
                             <Link 
-                                href="/#layanan" 
+                                href="/layanan" 
                                 onClick={() => setIsMenuOpen(false)}
                                 className="block px-4 py-3 text-gray-900 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
                             >
                                 Layanan
                             </Link>
-                            <Link 
-                                href="/#product" 
+                             <Link 
+                                href="/harga" 
                                 onClick={() => setIsMenuOpen(false)}
                                 className="block px-4 py-3 text-gray-900 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
                             >
-                                Product
+                               Harga
                             </Link>
+                          
                             <Link 
                                 href="/karir" 
                                 onClick={() => setIsMenuOpen(false)}
@@ -130,7 +141,7 @@ const Header = () => {
                             </Link>
 
                             <Link 
-                                href="/#contact" 
+                                href="/contact" 
                                 onClick={() => setIsMenuOpen(false)}
                                 className="block px-4 py-3 text-gray-900 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
                             >

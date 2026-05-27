@@ -22,7 +22,7 @@ const Sponsor = () => {
   return (
     <>
 
-      <section className="w-full border-y border-gray-100 py-8">
+      <section className="w-full flex md:col-span-3 border-y border-gray-100 py-8">
         <div className="overflow-hidden relative max-w-7xl justify-center mx-auto mb-4">
          
           <div className="marquee-track">

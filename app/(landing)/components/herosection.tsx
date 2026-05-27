@@ -31,10 +31,9 @@ const HeroSection = () => {
     return (
         <>
         <section className="relative min-h-screen   overflow-hidden">
-       
 
             {/* Content */}
-            <div className="relative z-10 max-w-7xl mx-auto px-8 sm:px-6 lg:px-8  mt-28 py-12 md:py-16">
+            <div className="relative z-10 max-w-7xl mx-auto px-8 sm:px-6 lg:px-8  mt-28 py-12 ">
                 <div className="flex flex-col lg:flex-row gap-12">
 
                     {/* Right: Text */}
@@ -118,7 +117,7 @@ const HeroSection = () => {
                          {/* Left: Visual */}
                     <div className="flex-1 animate-fade-in-up">
                         <Image
-                            src="https://images.unsplash.com/photo-1481026469463-66327c86e544?q=80&w=908&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            src="./image.jpg"
                             alt="Digital Transformation"
                             className="w-full h-96  object-cover rounded-3xl"
                             height={500}
@@ -152,29 +151,18 @@ const HeroSection = () => {
 
 
     {/* ACHIEVEMENT & VALUE PROPS */}
-    <section  ref={achieveRef} className='bg-gray-100 md:py-12 p-4'>
+    <section  ref={achieveRef} className='bg-gray-50  p-4'>
        <div className="max-w-7xl mx-auto px-6 mt-3 py-2">
   <div className={`opacity-0 ${achieveVisible ? 'anim-fade-up delay-1' : ''}`}>
-            <div className="grid grid-cols-1 md:grid-cols-3 justify-center items-center text-center md:text-left">
+            <div className="grid grid-cols-1 md:grid-cols-4 justify-center items-center text-center md:text-left">
    
-                <div className="flex justify-center md:justify-start items-center">
-              <CodeSquare className="hidden md:block md:w-62 md:h-62 w-32 h-32 text-gray-400 mb-4" />
-                </div>
-
-     <div className="flex md:col-span-2 flex-col gap-4">
-          <h2 className="text-2xl text-start font-bold text-gray-600">
+     <div className="flex md:col-span-1 flex-col gap-2">
+          <h2 className="md:text-xl text-xl text-start font-bold text-gray-600">
                 Teknologi Yang Kami Gunakan
             </h2>
-        <p className="text-gray-400 text-start text-sm ">
-            Kami memanfaatkan teknologi modern seperti React, Laravel, dan Docker untuk
-            membangun sistem yang aman, scalable, dan mudah dipelihara. Dengan kombinasi
-            ini, aplikasi dapat berjalan stabil, responsif, dan siap menghadapi kebutuhan
-            produksi.
-        </p>
+        </div>
 
          <Sponsor/>
-
-        </div>
       </div>
 
   </div>
@@ -183,7 +171,7 @@ const HeroSection = () => {
         </section>
 
        
-<section ref={cardeRef} className="relative  py-16 bg-gradient-to-b from-white to-gray-50">
+<section ref={cardeRef} className="relative  md:py-8 mb-12 bg-gradient-to-b from-white to-gray-50">
      <div className={`opacity-0 ${cardVisible ? 'anim-fade-left delay-1' : ''}`}>
     <div className="max-w-7xl mx-auto px-6">
 
@@ -244,73 +232,6 @@ const HeroSection = () => {
 
 
 
-      {/* DETAIL WEB & MOBILE */}
-      {/* <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-6 space-y-16">
-
-          <div ref={webRef} className="grid md:grid-cols-2 gap-12 items-center">
-            <div className={`opacity-0 ${webVisible ? 'anim-fade-left delay-1' : ''}`}>
-              <span className="text-xs font-semibold text-gray-600 tracking-widest uppercase py-1 rounded-full">Web Development</span>
-              <h2 className="text-3xl font-bold mt-4 mb-4"></h2>
-              <p className="text-gray-500 leading-relaxed mb-6"></p>
-              <div className="grid grid-cols-2 gap-3 mb-8">
-                {[
-                  { icon: Code2, label: "Clean Code Architecture" },
-                  { icon: Zap, label: "Performa Tinggi & SEO" },
-                  { icon: Shield, label: "Keamanan Enterprise" },
-                  { icon: Database, label: "Skalabel & Cloud-Ready" },
-                ].map(({ icon: I, label }) => (
-                  <div key={label} className="flex items-center gap-2 text-sm text-gray-700 bg-gray-50 rounded-lg px-3 py-2">
-                    <I className="w-4 h-4 text-blue-500" /> {label}
-                  </div>
-                ))}
-              </div>
-              <Link href="https://wa.me/6281122225804"
-                className="btn-shine inline-block text-white px-6 py-3 rounded-lg font-semibold">
-              hhh
-              </Link>
-            </div>
-            <div className={`opacity-0 ${webVisible ? 'anim-fade-right delay-2' : ''} img-zoom relative rounded-2xl overflow-hidden shadow-2xl aspect-video`}>
-              <Image unoptimized src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=800" alt="Web Dev" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-              <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur rounded-lg px-4 py-2 text-sm font-semibold text-gray-800">
-                🚀 100+ Website Diluncurkan
-              </div>
-            </div>
-          </div>
-
-          <div ref={mobileRef} className="grid md:grid-cols-2 gap-12 items-center">
-            <div className={`order-2 md:order-1 opacity-0 ${mobileVisible ? 'anim-fade-left delay-1' : ''} img-zoom relative rounded-2xl overflow-hidden shadow-2xl aspect-video`}>
-              <Image unoptimized src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800" alt="Mobile App" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent" />
-              <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur rounded-lg px-4 py-2 text-sm font-semibold text-gray-800">
-                📱 Android & iOS
-              </div>
-            </div>
-            <div className={`order-1 md:order-2 opacity-0 ${mobileVisible ? 'anim-fade-right delay-2' : ''}`}>
-              <span className="text-xs font-semibold text-gray-600 tracking-widest uppercase py-1 rounded-full">Mobile Development</span>
-              <h2 className="text-3xl font-bold mt-4 mb-4"></h2>
-              <p className="text-gray-500 leading-relaxed mb-6"></p>
-              <div className="grid grid-cols-2 gap-3 mb-8">
-                {[
-                  { icon: Smartphone, label: "React Native & Flutter" },
-                  { icon: Zap, label: "Animasi Smooth 60fps" },
-                  { icon: Shield, label: "Secure Authentication" },
-                  { icon: Users, label: "Push Notification" },
-                ].map(({ icon: I, label }) => (
-                  <div key={label} className="flex items-center gap-2 text-sm text-gray-700 bg-gray-50 rounded-lg px-3 py-2">
-                    <I className="w-4 h-4 text-blue-500" /> {label}
-                  </div>
-                ))}
-              </div>
-              <Link href="https://wa.me/6281122225804"
-                className="btn-shine inline-block text-white px-6 py-3 rounded-lg font-semibold">
-                Konsultasi Mobile App
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
         </>
     );

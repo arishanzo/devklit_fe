@@ -12,3 +12,14 @@ export interface dataArtikel {
   enclosure: string;
   categories: string[];
 }
+
+
+export interface FeatureOption {
+  id: string;
+  name: string;
+  description: string;
+  basePrice: number; // in IDR
+  addedDays: number;
+  category: 'platform' | 'feature' | 'tier';
+  allowedPlatforms?: string[]; // If undefined, available for all platforms
+}

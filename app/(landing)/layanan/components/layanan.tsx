@@ -4,15 +4,8 @@ const Layanan = () => {
 
         <>
          {/* SERVICES */}
-      <section id="layanan" className="py-24 px-6 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 opacity-15">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'linear-gradient(#3b82f6 1.5px, transparent 1.5px), linear-gradient(90deg, #8b5cf6 1.5px, transparent 1.5px)',
-            backgroundSize: '50px 50px'
-          }}></div>
-        </div>
-
+      <section id="layanan" className="py-24 md:py-32 px-6 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+      
         {/* Curved Lines */}
         <div className="absolute bottom-0 left-0 w-full h-64 opacity-25">
           <svg className="w-full h-full" viewBox="0 0 1440 320" preserveAspectRatio="none">
