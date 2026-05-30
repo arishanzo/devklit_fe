@@ -1364,7 +1364,7 @@ export default function CBTPage() {
                 className="flex items-center gap-1.5 bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold px-8 py-4 rounded-xl shadow-lg hover:shadow-indigo-300 transform transition hover:-translate-y-0.5 cursor-pointer active:translate-y-0"
               >
                 <RotateCcw className="h-5 w-5" />
-                Kembali ke Portal Keanggotaan & Coba Lagi
+                Kembali ke Portal Keanggotaan & Coba Lagi Nanti
               </button>
             </div>
           </div>
