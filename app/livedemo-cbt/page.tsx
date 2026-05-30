@@ -495,7 +495,7 @@ export default function CBTPage() {
                   {currentExamConfig.title} ({currentExamConfig.shortTitle})
                 </span>
                 <p className="text-[11px] text-slate-500 mt-1 font-semibold">
-                  Sesi Ujian: <strong className="text-slate-700">{currentExamConfig.totalQuestions} Soal</strong> &nbsp;•&nbsp; Alokasi Waktu: <strong className="text-slate-700">{currentExamConfig.durationMinutes} Menit</strong> &nbsp;•&nbsp; Nilai Maksimal: <strong className="text-slate-700">{currentExamConfig.maxTotalScore} Poin</strong>
+                  Sesi Ujian: <strong className="text-slate-700">{currentExamConfig.totalQuestions} Soal</strong> &nbsp;•&nbsp; Alokasi Waktu: <strong className="text-slate-700">{currentExamConfig.durationMinutes} Menit</strong> &nbsp;•&nbsp; Nilai Maksimal: <strong className="text-slate-700">{currentExamConfig.maxScore} Poin</strong>
                 </p>
               </div>
             </div>
@@ -1092,14 +1092,14 @@ export default function CBTPage() {
                 <div className="text-5xl font-black text-indigo-600 tracking-tight mt-2.5">
                   {scores.totalScore}
                 </div>
-                <p className="text-xs font-semibold text-slate-500 mt-1">Nilai Maksimal: {currentExamConfig.maxTotalScore}</p>
+                <p className="text-xs font-semibold text-slate-500 mt-1">Nilai Maksimal: {currentExamConfig.maxScore}</p>
                 
                 <div className="w-full bg-slate-100 rounded-full h-2 mt-4 overflow-hidden">
                   <div 
                     className={`h-full rounded-full transition-all duration-1000 ${
                       scores.isOverallPassed ? 'bg-emerald-500' : 'bg-indigo-500'
                     }`}
-                    style={{ width: `${(scores.totalScore / currentExamConfig.maxTotalScore) * 100}%` }}
+                    style={{ width: `${(scores.totalScore / currentExamConfig.maxScore) * 100}%` }}
                   ></div>
                 </div>
 
@@ -1139,7 +1139,7 @@ export default function CBTPage() {
                         </span>
                       </div>
                       <h3 className="text-base sm:text-lg font-black text-slate-900 tracking-tight leading-tight">{cat.fullName}</h3>
-                      <p className="text-[11px] sm:text-xs text-slate-500 font-semibold mt-1.5 leading-normal">{cat.description}</p>
+                      <p className="text-[11px] sm:text-xs text-slate-500 font-semibold mt-1.5 leading-normal">{cat.name}</p>
 
                       <div className="mt-5 space-y-3.5">
                         <div className="flex justify-between text-sm items-baseline">
@@ -1344,7 +1344,7 @@ export default function CBTPage() {
                           )}
                           {q.category === 'TKP' && (
                             <span className="font-bold text-emerald-800 block mb-1">
-                              Opsi Terbaik (Skor 5): Opsi ({Object.keys(q.optionPoints || {}).find(k => q.optionPoints?.[k as any] === 5)})
+                              Opsi Terbaik (Skor 5): Opsi ({Object.keys(q.optionPoints || {}).find(k => q.optionPoints?.[k as 'A' | 'B' | 'C' | 'D' | 'E'] === 5)})
                             </span>
                           )}
                           {q.explanation}
