@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "../globals.css";
+import Footer from "../(landing)/components/layouts/footer";
 
 export const metadata: Metadata = {
   title: "Simulasi CBT CAT 2026 | Devklit Tech",
@@ -15,5 +16,5 @@ export default function CBTLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <>{children}</>;
+  return <>{children} <Footer/></>;
 }
