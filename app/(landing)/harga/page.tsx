@@ -115,7 +115,7 @@ export default function InteractiveCalculator() {
   }, [companyName, referenceLink, calculatedSpecs.price, calculatedSpecs.days]);
 
   
- const { dynamicBenefits } = DynamicUseMemo(targetIndustry ,  activePlatformId);
+ const { dynamicBenefits } = DynamicUseMemo({targetIndustry ,  activePlatformId});
   const revealHeader = useReveal();
   const revealStep1 = useReveal();
   const revealStep2 = useReveal();
@@ -127,7 +127,7 @@ export default function InteractiveCalculator() {
   };
 
   return (
-    <section id="it-calculator" className="mt-32 mb-12 md:py-36 bg-slate-100 text-slate-800 relative overflow-hidden border-t border-slate-200">
+    <section id="it-calculator" className="mt-32 mb-12 md:py-36 text-slate-800 relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-200/10 rounded-full blur-3xl pointer-events-none" />
 
