@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo.png",
   },
+  verification: {
+google: "google-site-verification=7dydqvd9YRt8iGwBXwCn3bs7jbABNoG2dmaVE4TMeco",
+},
   description:
     "Devklit Tech adalah perusahaan software development yang menyediakan layanan pembuatan website, aplikasi mobile, sistem custom, dan solusi teknologi untuk transformasi digital bisnis.",
   keywords: [
