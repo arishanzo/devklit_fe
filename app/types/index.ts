@@ -13,6 +13,14 @@ export interface dataArtikel {
   categories: string[];
 }
 
+export type Job = {
+  id: string | number;
+  type: string;
+  title: string;
+  location: string;
+  experience: string;
+};
+
 
 export interface FeatureOption {
   id: string;

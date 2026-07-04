@@ -30,7 +30,7 @@ export default function HeroSection({ onNavigate }: HeroProps) {
 
   return (
     <div
-      className="relative bg-transparent text-white flex flex-col justify-center py-6 w-full h-full"
+      className="relative bg-transparent text-white flex flex-col justify-center w-full h-full"
     >
       {/* Top Location and Real-time Zone Label */}
       <div 
@@ -73,7 +73,7 @@ export default function HeroSection({ onNavigate }: HeroProps) {
           onClick={() => onNavigate('projects')}
           className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-white text-black font-semibold text-xs tracking-wider uppercase hover:bg-neutral-200 transition-all duration-300 flex items-center justify-center gap-2 group cursor-pointer"
         >
-          Explore Projects
+          Telusuri Proyek
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </button>
 
@@ -83,7 +83,7 @@ export default function HeroSection({ onNavigate }: HeroProps) {
           className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-[#121212] hover:bg-[#1A1A1A] border border-white/5 text-zinc-300 hover:text-white font-semibold text-xs tracking-wider uppercase transition-all duration-300 flex items-center justify-center gap-2.5 group cursor-pointer"
         >
           <Terminal className="w-4 h-4 text-blue-400" />
-          <span>Connect.exe</span>
+          <span>Kontak Kami</span>
         </button>
       </div>
 

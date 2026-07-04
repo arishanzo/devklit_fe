@@ -24,7 +24,6 @@ export default function Header({ activeSection, onNavigate, theme, toggleTheme }
     { name: 'Services', id: 'services', icon: Blocks },
     { name: 'Projects', id: 'projects', icon: Briefcase },
     { name: 'Karir', id: 'careers', icon: Users },
-    { name: 'Tech Stack', id: 'tech', icon: Code },
     { name: 'Contact', id: 'contact', icon: Mail },
   ];
 
@@ -60,20 +59,6 @@ export default function Header({ activeSection, onNavigate, theme, toggleTheme }
           {/* Subtle vertical trace line */}
           <div className="absolute top-4 bottom-4 left-1/2 -translate-x-1/2 w-[1px] bg-white/5 pointer-events-none" />
 
-          {/* Core Brand Indicator at the top of the pill */}
-          <div 
-            id="dock-brand-indicator"
-            onClick={() => onNavigate('home')}
-            className="w-9 h-9 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 p-[1px] flex items-center justify-center overflow-hidden cursor-pointer hover:scale-110 transition-transform duration-300 relative z-10 group"
-          >
-            <div className="w-full h-full bg-[#060606] rounded-full flex items-center justify-center">
-              <Sparkles className="w-4 h-4 text-blue-400 group-hover:text-purple-400 transition-colors" />
-            </div>
-            {/* Hover Tooltip (Left sliding) */}
-            <span className="absolute right-12 scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 pointer-events-none bg-black/90 border border-white/10 text-[10px] font-mono text-zinc-300 px-3 py-1.5 rounded-lg whitespace-nowrap shadow-xl">
-              NEXUS_LABS.EXE
-            </span>
-          </div>
 
           {/* Divider */}
           <div className="w-6 h-[1px] bg-white/10 relative z-10" />
@@ -132,24 +117,7 @@ export default function Header({ activeSection, onNavigate, theme, toggleTheme }
         id="navbar-header"
         className="lg:hidden fixed top-0 left-0 right-0 z-50 py-4 px-4 bg-[#060606]/85 backdrop-blur-md border-b border-white/5 flex items-center justify-between"
       >
-        {/* Brand / Logo */}
-        <div
-          id="navbar-brand"
-          onClick={() => onNavigate('home')}
-          className="flex items-center gap-2 cursor-pointer group"
-        >
-          <div className="relative w-8.5 h-8.5 rounded-full bg-gradient-to-tr from-blue-500 to-purple-400 p-[1px] flex items-center justify-center overflow-hidden">
-            <div className="w-full h-full bg-[#060606] rounded-full flex items-center justify-center">
-              <Code className="w-4 h-4 text-blue-400" />
-            </div>
-          </div>
-          <div className="flex flex-col">
-            <span className="text-white font-bold tracking-tight text-xs font-sans flex items-center gap-1">
-              NX LABS <Sparkles className="w-3 h-3 text-blue-400 animate-pulse" />
-            </span>
-            <span className="text-[8px] text-zinc-500 font-mono tracking-widest leading-none">CREATIVE LABS</span>
-          </div>
-        </div>
+    
 
         {/* Theme Toggle Button (diatas sendiri) */}
         {/* <button

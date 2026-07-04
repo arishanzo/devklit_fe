@@ -6,7 +6,6 @@ import Header from "./components/layouts/header";
 import SocialDock from "./components/layouts/SocialMedia";
 import Contact from "./components/contact";
 import Careers from "./components/Careers";
-import TechStack from "./components/TechStack";
 import Projects from "./components/Projects";
 import Services from "./components/services";
 import BentoAbout from "./components/BentoAbout";
@@ -190,14 +189,7 @@ export default function Home() {
               {renderSlide('careers', <Careers />)}
             </div>
 
-            {/* Slide 04: Engineering Matrix (Tech Stack) */}
-            <div 
-              id="tech" 
-              className="w-full relative flex flex-col justify-center"
-            >
-              {renderSlide('tech', <TechStack />)}
-            </div>
-
+          
             {/* Slide 05: Contact & Footer Combined */}
             <div 
               id="contact" 
