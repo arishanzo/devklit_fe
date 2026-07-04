@@ -1,5 +1,4 @@
-import Header from "./components/layouts/header";
-import Footer from "./components/layouts/footer";
+
 
 export default function LandingLayout({
   children,
@@ -8,9 +7,8 @@ export default function LandingLayout({
 }>) {
   return (
     <>
-      <Header />
+     
       {children}
-      <Footer />
     </>
   );
 }

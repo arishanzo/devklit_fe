@@ -1,240 +1,112 @@
-'use client';
+'use client'
 
-import Link from 'next/link';
-import useCountUp from '@/app/hooks/useCountUp';
-import { Code, Code2, CodeSquare, Database, Headphones, Settings, Shield, Smartphone, Users, Zap } from 'lucide-react';
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
-import useReveal from '@/app/hooks/useReveal';
-import Sponsor from './sponsor';
+import { useState, useEffect, useRef } from 'react';
+import { ArrowRight,Terminal, ArrowUpRight, MapPin } from 'lucide-react';
+import TechStackDev from './techStackDev';
 
-const HeroSection = () => {
-    const klien = useCountUp(120);
-    const uptime = useCountUp(999);
-    const pengalaman = useCountUp(250);
+interface HeroProps {
+  onNavigate: (sectionId: string) => void;
+}
 
-    const [visible, setVisible] = useState(false);
+export default function HeroSection({ onNavigate }: HeroProps) {
+  const [utcTime, setUtcTime] = useState('');
 
-  const { ref: webRef, visible: webVisible } = useReveal();
-  const { ref: mobileRef, visible: mobileVisible } = useReveal();
-  const { ref: achieveRef, visible: achieveVisible } = useReveal();
-  const { ref: cardeRef, visible: cardVisible } = useReveal();
-
-  const colors = ['bg-red-100', 'bg-blue-100','bg-green-100','bg-yellow-500','bg-purple-500'];
-
-  
+  // Update real-time clock for top location tag
   useEffect(() => {
-    const t = setTimeout(() => setVisible(true), 100);
-    return () => clearTimeout(t);
+        const updateTime = () => {
+        const now = new Date();
+        const options: Intl.DateTimeFormatOptions = {
+            timeZone: "Asia/Jakarta",
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: false,
+        };
+        setUtcTime(now.toLocaleTimeString("id-ID", options) + " WIB");
+        };
+    updateTime();
+    const interval = setInterval(updateTime, 60000); 
+    return () => clearInterval(interval);
   }, []);
 
-    return (
-        <>
-        <section className="relative min-h-screen   overflow-hidden">
-
-            {/* Content */}
-            <div className="relative z-10 max-w-7xl mx-auto px-8 sm:px-6 lg:px-8  mt-28 py-12 ">
-                <div className="flex flex-col lg:flex-row gap-12">
-
-                    {/* Right: Text */}
-                    <div className="flex-1 text-left">
-                        {/* Badge */}
-                        <div className="inline-flex items-center space-x-2 border border-indigo-100 rounded-full px-4 py-2 mb-8 animate-fade-in">
-                            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                            <span className="text-indigo-600 md:text-sm text-xs font-medium">🚀 Solusi Transformasi Digital Terpercaya</span>
-                        </div>
-
-                        {/* Main Heading */}
-                        <h1 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4 animate-fade-in-up">
-                            Transformasi Bisnis Digital
-                        </h1>
-
-                        <h1 className="text-3xl lg:text-5xl font-bold mb-6 animate-fade-in-up">
-                            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent">
-                                Untuk Masa Depan Perusahaan
-                            </span>
-                        </h1>
-
-                        {/* Description */}
-                        <p className="text-md md:text-xl text-gray-500 mb-8 animate-fade-in-up animation-delay-200">
-                            Tingkatkan efisiensi operasional dan produktivitas bisnis dengan solusi digitalisasi terintegrasi, cloud computing, dan sistem otomasi modern.
-                        </p>
-
-                        {/* CTA Buttons */}
-                        <div className="flex flex-col sm:flex-row gap-4 mb-10 animate-fade-in-up animation-delay-400">
-                            <Link
-                                href="#contact"
-                                className="px-8 py-4 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl w-full sm:w-auto"
-                                aria-label="Mulai transformasi digital gratis"
-                            >
-                                Mulai Transformasi Digital
-                            </Link>
-                            <a href='https://wa.me/628816982294?text=Halo%20saya%20ingin%20konsultasi'
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="px-8 py-4 bg-white border-2 border-indigo-200 text-indigo-600 rounded-lg font-semibold hover:bg-indigo-50 hover:scale-105 transition-all w-full sm:w-auto"
-                                aria-label="Konsultasi gratis dengan tim ahli"
-                            >
-                                Konsultasi Gratis
-                            </a>
-                        </div>
-
-            
-
-                        {/* Testimonial */}
-                        <div className="flex items-center gap-4 mt-4 animate-fade-in-up animation-delay-600">
-                         
-
-                         {/* Avatar stack versi teks */}
-                        <div className="flex -space-x-3">
-                            {['A', 'R', 'Z', 'K', 'F'].map((item, i) => (
-                                <div
-                                    key={i}
-                                    className={`w-9 h-9 flex items-center justify-center rounded-full border-2 border-white bg-indigo-500 text-white text-sm font-semibold ${colors[i % colors.length]}`}
-                                >
-                                    {item}
-                                </div>
-                            ))}
-                        </div>
-
-                            {/* Rating & text */}
-                            <div>
-                                <div className="flex items-center gap-1 mb-0.5">
-                                    {[1,2,3,4,5].map(s => (
-                                        <svg key={s} className="w-4 h-4 text-yellow-400 fill-yellow-400" viewBox="0 0 20 20">
-                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                        </svg>
-                                    ))}
-                                    <span className="text-sm font-semibold text-gray-700 ml-1">4.9</span>
-                                </div>
-                                <p className="text-xs text-gray-500">Dipercaya Beberapa <span className="font-medium text-gray-700">Perusahaan</span> di seluruh Indonesia</p>
-                            </div>
-                        </div>
-
-
-                    </div>
-
-                         {/* Left: Visual */}
-                    <div className="flex-1 animate-fade-in-up">
-                        <Image
-                            src="./image.jpg"
-                            alt="Digital Transformation"
-                            className="w-full h-96  object-cover rounded-3xl"
-                            height={500}
-                            width={500}
-                            unoptimized
-                        />
-
-                           {/* Stats */}
-                        <div className="grid md:grid-cols-4 grid-cols-2 mt-12 md:gap-2 animate-fade-in-up animation-delay-600">
-                            <div className="rounded-xl p-4 hover:shadow-md transition-all">
-                                <div className="text-2xl font-bold text-indigo-600 mb-1">{klien}+</div>
-                                <div className="text-gray-500 text-sm">Pelanggan Kami</div>
-                            </div>
-                            <div className="rounded-xl p-4 hover:shadow-md transition-all">
-                                <div className="text-2xl font-bold text-indigo-600 mb-1">{(uptime / 10).toFixed(1)}%</div>
-                                <div className="text-gray-500 text-sm">Jaminan Waktu Aktif</div>
-                            </div>
-                            <div className="rounded-xl p-4 hover:shadow-md transition-all">
-                                <div className="text-2xl font-bold text-indigo-600 mb-1">24/7</div>
-                                <div className="text-gray-500 text-sm">Dukungan Teknis</div>
-                            </div>
-                            <div className="rounded-xl p-4 hover:shadow-md transition-all">
-                                <div className="text-2xl font-bold text-indigo-600 mb-1">{pengalaman}+</div>
-                                <div className="text-gray-500 text-sm">Aplikasi Terselesaikan</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-    {/* ACHIEVEMENT & VALUE PROPS */}
-    <section  ref={achieveRef} className='bg-gray-50  p-4'>
-       <div className="max-w-7xl mx-auto px-6 mt-3 py-2">
-  <div className={`opacity-0 ${achieveVisible ? 'anim-fade-up delay-1' : ''}`}>
-            <div className="grid grid-cols-1 md:grid-cols-4 justify-center items-center text-center md:text-left">
-   
-     <div className="flex md:col-span-1 flex-col gap-2">
-          <h2 className="md:text-xl text-xl text-start font-bold text-gray-600">
-                Teknologi Yang Kami Gunakan
-            </h2>
-        </div>
-
-         <Sponsor/>
+  return (
+    <div
+      className="relative bg-transparent text-white flex flex-col justify-center py-6 w-full h-full"
+    >
+      {/* Top Location and Real-time Zone Label */}
+      <div 
+        id="hero-location-badge"
+        className="flex items-center gap-2 text-zinc-500 text-xs sm:text-sm tracking-widest font-mono uppercase mb-6"
+      >
+        <MapPin className="w-4 h-4 text-zinc-600" />
+        <span>Lamongan Jawa Timur</span>
+        <span className="text-zinc-700">•</span>
+        <span className="text-zinc-400 font-semibold">{utcTime || ''}</span>
       </div>
 
-  </div>
-</div>
+      {/* Main Big Elegant Heading */}
+      <h1
+        id="hero-heading"
+        className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight font-sans leading-[1.12] text-white max-w-2xl"
+      >
+       Tingkatkan Visibilitas <br />
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-purple-300 filter drop-shadow-sm">
+        Website Modern, Cepat, & Ramah SEO.
+        </span>
+      </h1>
 
-        </section>
+      {/* Subtitle / Intro sentence */}
+    <p 
+  id="hero-subtitle" 
+  className="mt-6 text-sm sm:text-base text-zinc-400 max-w-xl font-sans font-light leading-relaxed text-justify"
+>
+  Tingkatkan kehadiran bisnis Anda di dunia digital dengan website modern, cepat, dan ramah SEO. Kami membantu Anda membangun situs profesional yang mudah ditemukan di Google, aman, dan siap mendukung pertumbuhan online Anda.
+</p>
 
-       
-<section ref={cardeRef} className="relative  md:py-8 mb-12 bg-gradient-to-b from-white to-gray-50">
-     <div className={`opacity-0 ${cardVisible ? 'anim-fade-left delay-1' : ''}`}>
-    <div className="max-w-7xl mx-auto px-6">
+       <div id="Tech" className="flex flex-wrap gap-2 mt-8">
+        <TechStackDev />
+       </div>
+    
+      {/* Interactive Action Buttons */}
+      <div id="hero-actions" className="mt-10 flex flex-col sm:flex-row items-center gap-4">
+        <button
+          id="hero-primary-btn"
+          onClick={() => onNavigate('projects')}
+          className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-white text-black font-semibold text-xs tracking-wider uppercase hover:bg-neutral-200 transition-all duration-300 flex items-center justify-center gap-2 group cursor-pointer"
+        >
+          Explore Projects
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        </button>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <button
+          id="hero-secondary-btn"
+          onClick={() => onNavigate('contact')}
+          className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-[#121212] hover:bg-[#1A1A1A] border border-white/5 text-zinc-300 hover:text-white font-semibold text-xs tracking-wider uppercase transition-all duration-300 flex items-center justify-center gap-2.5 group cursor-pointer"
+        >
+          <Terminal className="w-4 h-4 text-blue-400" />
+          <span>Connect.exe</span>
+        </button>
+      </div>
 
-            {/* Card 1 */}
-            <div className="group bg-white/70 backdrop-blur-xl border border-gray-100 rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                
-                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-indigo-100 text-indigo-600 mb-4 group-hover:scale-110 transition">
-                    <Zap size={22} />
-                </div>
+     
+        {/* Capsule Category Tags */}
+      <div id="hero-capsule-tags" className="flex flex-wrap gap-2 mt-8">
+        {[
+          '120+ Pelanggan Kami',
+          '99.9% Jaminan Waktu Aktif',
+          '24/7 Dukungan Teknis',
+          '250+ Aplikasi Terselesaikan ',
+        ].map((tag, idx) => (
+          <span
+            key={idx}
+            className="bg-[#121212] hover:bg-[#1A1A1A] border border-white/5 text-zinc-300 px-4 py-2 rounded-full text-xs font-mono tracking-wide transition-colors duration-300 cursor-default"
+            id={`hero-tag-${idx}`}
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
 
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    Cepat Implementasi
-                </h3>
-
-                <p className="text-sm text-gray-500 leading-relaxed">
-                    Sistem siap digunakan dalam hitungan hari, bukan bulan.
-                </p>
-            </div>
-
-            {/* Card 2 */}
-            <div className="group bg-white/70 backdrop-blur-xl border border-gray-100 rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                
-                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-violet-100 text-violet-600 mb-4 group-hover:scale-110 transition">
-                    <Settings size={22} />
-                </div>
-
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    Custom Sesuai Bisnis
-                </h3>
-
-                <p className="text-sm text-gray-500 leading-relaxed">
-                    Solusi dirancang mengikuti workflow dan kebutuhan spesifik bisnis Anda.
-                </p>
-            </div>
-
-            {/* Card 3 */}
-            <div className="group bg-white/70 backdrop-blur-xl border border-gray-100 rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                
-                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-emerald-100 text-emerald-600 mb-4 group-hover:scale-110 transition">
-                    <Headphones size={22} />
-                </div>
-
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    Support Berkelanjutan
-                </h3>
-
-                <p className="text-sm text-gray-500 leading-relaxed">
-                    Tim kami siap membantu kapan saja saat Anda membutuhkan bantuan.
-                </p>
-            </div>
-        </div>
+     
     </div>
-    </div>
-</section>
-
-
-
-
-        </>
-    );
-};
-
-export default HeroSection;
+  );
+}
