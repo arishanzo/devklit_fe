@@ -108,13 +108,15 @@ export default function Services() {
             ))}
           </ul>
         </div>
-        <button className="group mt-8 w-full flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] px-5 py-4 transition-all duration-300">
+          <a href="https://wa.me/+628816982294" target="_blank" rel="noopener noreferrer"
+ 
+          className="group mt-8 w-full flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] px-5 py-4 transition-all duration-300">
   <span className="text-sm font-semibold text-white">
     {service.cta}
   </span>
 
   <ArrowRight className="w-5 h-5 text-blue-400 group-hover:translate-x-1 transition-transform" />
-</button>
+</a>
       </div>
     );
   })}

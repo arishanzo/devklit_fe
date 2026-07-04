@@ -33,6 +33,18 @@ body {
 html {
   scroll-behavior: smooth;
 }
+   @keyframes slideInUp {
+          from { opacity: 0; transform: translateY(52px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideInDown {
+          from { opacity: 0; transform: translateY(-52px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        .slide-up   { animation: slideInUp   540ms cubic-bezier(0.16,1,0.3,1) both; }
+        .slide-down { animation: slideInDown 540ms cubic-bezier(0.16,1,0.3,1) both; }
+        * { scrollbar-width: none !important; -ms-overflow-style: none !important; }
+        *::-webkit-scrollbar { display: none !important; } 
 
 /* Custom Animations */
 @keyframes blob {
@@ -172,6 +184,25 @@ html {
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Custom dark scrollbar matching #060606 background */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #060606;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e1e1e;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2e2e2e;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1e1e1e #060606;
 }
 
 

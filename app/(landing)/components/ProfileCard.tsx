@@ -1,6 +1,6 @@
 'use client';
 
-import { FaInstagram, FaLinkedinIn, FaThreads } from 'react-icons/fa6';
+import { FaInstagram, FaLinkedinIn, FaThreads, FaWhatsapp } from 'react-icons/fa6';
 import { Mail, ArrowUpRight, Sparkles, Shield, Code } from 'lucide-react';
 import Image from 'next/image';
 
@@ -80,14 +80,14 @@ export default function ProfileCard({ onNavigate }: ProfileCardProps) {
         {/* Social media icons */}
         <div className="flex items-center gap-3 justify-center lg:justify-start" id="profile-socials-group">
           {[
-                 { icon: FaInstagram, href: 'https://github.com', label: 'GitHub' },
+                 { icon: FaInstagram, href: 'https://www.instagram.com/devklittech/', label: 'GitHub' },
                            { icon: FaLinkedinIn, href: 'https://linkedin.com', label: 'LinkedIn' },
-                           { icon: FaThreads, href: 'https://twitter.com', label: 'Twitter' },
-            { icon: Mail, link: '#contact', label: 'Email', isScroll: true }
+                           { icon: FaThreads, href: 'https://www.threads.com/@devklittech', label: 'Twitter' },
+            { icon: FaWhatsapp, href: 'https://wa.me/+628816982294', label: 'WhatsApp', isScroll: false }
           ].map((social, idx) => (
             <a
               key={idx}
-              href={social.link}
+              href={social.href}
               target={social.isScroll ? undefined : "_blank"}
               rel="noopener noreferrer"
               onClick={social.isScroll ? (e) => { e.preventDefault(); onNavigate('contact'); } : undefined}
@@ -101,19 +101,19 @@ export default function ProfileCard({ onNavigate }: ProfileCardProps) {
         </div>
 
         {/* Call to action element */}
-        <div 
-          onClick={() => onNavigate('contact')}
-          className="bg-[#1A1A1A] border border-white/5 pl-5 pr-2 py-2 rounded-full flex items-center justify-between hover:border-white/20 hover:bg-[#222] transition-all duration-300 cursor-pointer shadow-lg group/cta w-full max-w-[280px] lg:max-w-none"
+         <a href="https://wa.me/+628816982294" target="_blank" rel="noopener noreferrer"
+ 
+          className="bg-[#1A1A1A] border border-white/5 pl-5 pr-2 py-2 rounded-full flex items-center justify-center gap-8 hover:border-white/20 hover:bg-[#222] transition-all duration-300 cursor-pointer shadow-lg group/cta w-full max-w-[280px] lg:max-w-none"
           id="profile-cta-work"
         >
         <span className="text-xs font-semibold text-zinc-300 uppercase tracking-wider font-mono text-center justify-center">
             Hubungi Tim Kami
             </span>
 
-          <div className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center shadow-lg transition-transform duration-300 group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5">
+          <div className="md:w-10 md:h-10 w-8 h-8 rounded-full bg-white text-black flex items-center justify-center shadow-lg transition-transform duration-300 group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5">
             <ArrowUpRight className="w-5 h-5 font-bold" />
           </div>
-        </div>
+        </a>
       </div>
     </div>
   );

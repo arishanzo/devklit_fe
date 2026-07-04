@@ -77,14 +77,13 @@ export default function HeroSection({ onNavigate }: HeroProps) {
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </button>
 
-        <button
+        <a href="https://wa.me/+628816982294" target="_blank" rel="noopener noreferrer"
           id="hero-secondary-btn"
-          onClick={() => onNavigate('contact')}
           className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-[#121212] hover:bg-[#1A1A1A] border border-white/5 text-zinc-300 hover:text-white font-semibold text-xs tracking-wider uppercase transition-all duration-300 flex items-center justify-center gap-2.5 group cursor-pointer"
         >
           <Terminal className="w-4 h-4 text-blue-400" />
           <span>Kontak Kami</span>
-        </button>
+        </a>
       </div>
 
      

@@ -25,13 +25,13 @@ const TechStackDev = () => {
       <section className="w-max-xs w-full mx-auto flex md:col-span-3">
                     <div className="grid grid-cols-1 md:grid-cols-4 justify-center items-center text-center md:text-left">
    
-     <div className="flex md:col-span-1 flex-col gap-2">
-          <h2 className="md:text-xl text-xs text-start font-bold text-gray-400">
-                Teknologi Yang Kami Gunakan
+     <div className="flex md:col-span-1 flex-col gap-2 py-6 md:mb-0">
+          <h2 className="md:text-xl text-xl text-start font-bold text-gray-400">
+                Teknologi Yang Kami Gunakan:
             </h2>
         </div>
 
-        <div className="overflow-hidden relative max-w-xl justify-center mx-auto mb-4">
+        <div className="overflow-hidden relative max-w-xl justify-center mx-auto ">
          
           <div className="marquee-track">
             {doubled.map((tech, i) => (
