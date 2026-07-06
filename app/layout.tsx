@@ -11,14 +11,14 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Devklit Tech | Software Development Company",
+  description:
+    "Devklit Tech adalah perusahaan software development yang menyediakan layanan pembuatan website, aplikasi mobile, sistem custom, dan solusi teknologi untuk transformasi digital bisnis.",
   icons: {
     icon: "/logo.png",
   },
   verification: {
-google: "google-site-verification=7dydqvd9YRt8iGwBXwCn3bs7jbABNoG2dmaVE4TMeco",
-},
-  description:
-    "Devklit Tech adalah perusahaan software development yang menyediakan layanan pembuatan website, aplikasi mobile, sistem custom, dan solusi teknologi untuk transformasi digital bisnis.",
+    google: "google-site-verification=7dydqvd9YRt8iGwBXwCn3bs7jbABNoG2dmaVE4TMeco",
+  },
   keywords: [
     "software development",
     "web development",
@@ -27,7 +27,30 @@ google: "google-site-verification=7dydqvd9YRt8iGwBXwCn3bs7jbABNoG2dmaVE4TMeco",
     "perusahaan teknologi",
     "jasa pembuatan aplikasi",
   ],
+  openGraph: {
+    title: "Devklit Tech | Software Development Company",
+    description:
+      "Kami membangun solusi software modern dan scalable untuk bisnis digital.",
+    url: "https://devklittech.my.id",
+    type: "website",
+    images: [
+      {
+        url: "https://devklittech.my.id/images/thumbnail.png",
+        width: 1200,
+        height: 630,
+        alt: "Devklit Tech Thumbnail",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Devklit Tech | Software Development Company",
+    description:
+      "Kami membangun solusi software modern dan scalable untuk bisnis digital.",
+    images: ["https://devklittech.my.id/images/thumbnail.png"], // sama seperti OG image
+  },
 };
+
 
 export default function RootLayout({
   children,
