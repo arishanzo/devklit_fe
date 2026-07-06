@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://devklittech.my.id/images/thumbnail.jpg", // ganti dengan URL gambar kamu
+        url: "https://devklittech.my.id/images/thumbnail.png", // ganti dengan URL gambar kamu
         width: 1200,
         height: 630,
         alt: "Devklit Tech Thumbnail",
