@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Cpu, Layout, Sparkles, Check, Play, RefreshCw, Layers, Zap, Gauge, Code2, Move, ArrowRight } from 'lucide-react';
+import { Cpu, Layout, Sparkles, Check, Play, RefreshCw, Layers, Zap, Gauge, Code2, Move, ArrowRight, Globe } from 'lucide-react';
 import { servicesList } from '@/app/lib/servicesList';
 
 export default function Services() {
@@ -48,23 +48,27 @@ export default function Services() {
       <div id="services-container" className="max-w-7xl mx-auto w-full">
         
         {/* Section Header */}
-        <div id="services-header" className="mb-6 lg:mb-8 md:flex md:items-end md:justify-between">
-          <div>
-            <div className="flex items-center gap-2 mb-2">
-              <Cpu className="w-4 h-4 text-blue-400" />
-              <span className="text-xs font-mono tracking-widest text-blue-400 uppercase">ENGINEERING CAPABILITIES</span>
-            </div>
-            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight font-sans">
-              Expertise Engineered <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-violet-300">
-                Without Compromise.
-              </span>
-            </h2>
-          </div>
-          <p className="mt-4 md:mt-0 text-sm text-zinc-400 max-w-md font-sans font-light leading-relaxed">
-            I build bespoke digital instruments designed to perform at the limits of modern browser rendering, backed by clean type-safe development architectures.
-          </p>
-        </div>
+     <div id="services-header" className="mb-6 lg:mb-8 md:flex md:items-end md:justify-between">
+  <div>
+    <div className="flex items-center gap-2 mb-2">
+      <Globe className="w-4 h-4 text-blue-400" />
+      <span className="text-xs font-mono tracking-widest text-blue-400 uppercase">
+       Layanan Kami
+      </span>
+    </div>
+    <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight font-sans">
+      Layanan Web, Aplikasi, Saas <br />
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-violet-300">
+        Modern, Scalable, & Aman.
+      </span>
+    </h2>
+  </div>
+  <p className="mt-4 md:mt-0 text-sm text-zinc-400 max-w-md font-sans font-light leading-relaxed">
+    Kami merancang dan membangun website serta aplikasi custom dengan arsitektur
+    bersih, performa tinggi, dan siap produksi. Didukung integrasi cloud, keamanan
+    enterprise, serta pengalaman pengguna yang intuitif.
+  </p>
+</div>
 
        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
   {servicesList.map((service) => {
