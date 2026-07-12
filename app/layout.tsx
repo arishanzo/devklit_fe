@@ -10,7 +10,10 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Devklit Tech | Software Development Company",
+  title: {
+    default: "Devklit Tech | Software Development Company",
+    template: "%s | Devklit Tech",
+  },
   description:
     "Devklit Tech adalah perusahaan software development yang menyediakan layanan pembuatan website, aplikasi mobile, sistem custom, dan solusi teknologi untuk transformasi digital bisnis.",
   icons: {
@@ -26,6 +29,12 @@ export const metadata: Metadata = {
     "custom software",
     "perusahaan teknologi",
     "jasa pembuatan aplikasi",
+     "jasa pembuatan website murah",
+      "jasa pembuatan website",
+       "jasa pembuatan website lamongan",
+        "Indonesia",
+         "jawa timur",
+         "lamongan",
   ],
   openGraph: {
     title: "Devklit Tech | Software Development Company",
