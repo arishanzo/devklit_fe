@@ -19,9 +19,6 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo.png",
   },
-  verification: {
-    google: "google-site-verification=7dydqvd9YRt8iGwBXwCn3bs7jbABNoG2dmaVE4TMeco",
-  },
   keywords: [
     "software development",
     "web development",
