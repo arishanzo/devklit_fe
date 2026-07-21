@@ -10,6 +10,5 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: "https://devklittech.my.id/sitemap.xml",
-    host: "https://devklittech.my.id",
   };
 }
