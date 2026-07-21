@@ -65,10 +65,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head><meta name="google-site-verification" content="xa_bsA-WjaV2kn95brcoBLh1mcfcHpBkqK3BaF3rZCc" />
       <title>DEVKLIT TECHNOLOGY - JASA PEMBUATAN WEBSITE LAMONGAN</title>
       <body className={`${poppins.variable} antialiased`}>
         {children}
       </body>
+      </head>
     </html>
   );
 }
