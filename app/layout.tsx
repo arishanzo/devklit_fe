@@ -11,7 +11,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "DEVKLIT TECHNOLOGY - JASA PEMBUATAN WEBSITE LAMONGAN",
+    default: "JASA PEMBUATAN WEBSITE LAMONGAN",
     template: "%s | Devklit Tech",
   },
   description:
