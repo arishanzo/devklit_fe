@@ -11,7 +11,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "Devklit Tech | JASA PEMBUATAN WEBSITE LAMONGAN",
+    default: "DEVKLIT TECHNOLOGY - JASA PEMBUATAN WEBSITE LAMONGAN",
     template: "%s | Devklit Tech",
   },
   description:
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
          "lamongan",
   ],
   openGraph: {
-    title: "Devklit Tech | JASA PEMBUATAN WEBSITE LAMONGAN",
+    title: "DEVKLIT TECHNOLOGY - JASA PEMBUATAN WEBSITE LAMONGAN",
     description:
       "Kami membangun solusi software modern dan scalable untuk bisnis digital.",
     url: "https://devklittech.my.id",
@@ -66,7 +66,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head><meta name="google-site-verification" content="xa_bsA-WjaV2kn95brcoBLh1mcfcHpBkqK3BaF3rZCc" />
-      <title>DEVKLIT TECHNOLOGY - JASA PEMBUATAN WEBSITE LAMONGAN</title>
+   
       <body className={`${poppins.variable} antialiased`}>
         {children}
       </body>
