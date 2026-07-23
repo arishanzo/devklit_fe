@@ -18,6 +18,8 @@ export const runtime = 'edge';
 const SECTIONS = ['home', 'about', 'services', 'projects', 'careers', 'contact'] as const;
 type SectionId = typeof SECTIONS[number];
 
+
+
 export default function Home() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState<'down' | 'up'>('down');
